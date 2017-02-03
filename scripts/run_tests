@@ -1,0 +1,14 @@
+#!/bin/sh
+
+ENVIRONMENT=${HOST:=integration}
+WORKERS=${SELENIUM_WORKERS:=1}
+
+
+# A bug on CI, fails to find bundler correctly
+# As a hack, install bundler first
+
+gem install bundler
+
+
+export environment=$ENVIRONMENT
+bundle exec parallel_cucumber features/ -n $WORKERS -o '-f json --out result-$TEST_ENV_NUMBER.json --format pretty'

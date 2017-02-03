@@ -1,0 +1,68 @@
+
+CHROME:
+  platform: Mac OS X 10.12
+  browserName: Chrome
+  version: "55.0"
+
+FIREFOX:
+  platform: Mac OS X 10.12
+  browserName: Firefox
+  version: 50.0
+
+IE:
+  platform: Windows 10
+  browserName: internet_explorer
+  version: 11.103
+
+SAFARI:
+  platform: Mac OS X 10.12
+  browserName: Safari
+  version: 10.0
+
+IPHONE_4S:
+  platform: Mac OS X 10.9
+  browserName: Chrome
+  version: 31
+
+IPHONE_6S:
+  deviceName: iPhone 6s Plus Device
+  deviceOrientation: portrait
+  browserName:  Safari
+  platformVersion: "9.3"
+  platformName: iOS
+
+IPHONE_6:
+  deviceName: iPhone 6 Device
+  deviceOrientation: portrait
+  browserName:  Safari
+  platformVersion: "9.3"
+  platformName: iOS
+
+IPHONE_5S:
+  deviceName: iPhone 5s Simulator
+  deviceOrientation: portrait
+  browserName:  Safari
+  platformVersion: "10.3"
+  platformName: iOS
+
+IPHONE_5:
+  deviceName: iPhone 5 Simulator
+  deviceOrientation: portrait
+  browserName:  Safari
+  platformVersion: "10.0"
+  platformName: iOS
+
+ANDROID_TAB:
+  deviceName: Samsung Galaxy Note 5 Device
+  deviceOrientation: portrait
+  browserName:  chrome
+  platformVersion: "6.0"
+  platformName: Android
+
+ANDROID_6:
+  deviceName: Samsung Galaxy S5 Device
+  deviceOrientation: portrait
+  browserName:  chrome
+  platformVersion: "5.0"
+  platformName: Android
+
