@@ -9,13 +9,12 @@ require File.dirname(__FILE__) + '/../support/helper/configuration'
 
 raise "Please set the TEST_ENV and BROWSER_OPT environment variable" unless ENV['TEST_ENV'] || ENV['BROWSER_OPT']
 
-app_host="http://www.public.#{ENV['ENV_ID']}.qa.noths.com"
+APP_HOST="http://www.public.#{ENV['ENV_ID']}.qa.noths.com"
 
 Before do |scenario|
-  puts "test env is #{app_host}"
   browser_config = Configuration.load(ENV['BROWSER_OPT'])
   browser_config[:name]="#{scenario.feature.name} - #{scenario.name}"
-  Capybara.app_host = app_host
+  Capybara.app_host = APP_HOST
   Capybara.default_driver = :selenium
   Capybara.register_driver :selenium do |app|
     if ENV['TEST_ENV'] == "local"
@@ -35,7 +34,6 @@ After do |scenario|
   jobname = "#{scenario.feature.name} - #{scenario.name}"
   puts "SauceOnDemandSessionID=#{sessionid} job-name=#{jobname}"
   @driver.quit
-
   if scenario.passed?
     SauceWhisk::Jobs.pass_job sessionid
   else
