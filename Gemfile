@@ -20,3 +20,7 @@ gem "rake", "10.1.0"
 
 gem "parallel_tests"
 gem "rspec-expectations"
+
+gem "capybara-screenshot"
+
+gem "chromedriver-helper"

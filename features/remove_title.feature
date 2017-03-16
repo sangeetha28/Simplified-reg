@@ -10,10 +10,12 @@ Feature: Remove title field
   Scenario: Title field should not be displayed in Registration form
     When I click on Register
     And I enter in my details in sign up form
-    Then the Registration page should NOT include a title field
+    Then the Registration page should NOT have included a title field
     And I click Submit button
     Then I should register successfully
-    Then the My accounts page should NOT include a title field
+    And I navigate to My accounts page
+    And I should be taken to My details page
+    Then the My accounts page should NOT have included a title field
 
   @1.02
   Scenario: Title field should not be displayed in Registration form via favourites
@@ -21,17 +23,19 @@ Feature: Remove title field
     Then I should see Your Favourites
     When I click on REGISTER
     And I enter in my details in sign up form
-    Then the Registration page should NOT include a title field
+    Then the Registration page should NOT have included a title field
     And I click Submit button
     Then I should register successfully
-    Then the My accounts page should NOT include a title field
+    And I navigate to My accounts page
+    And I should be taken to My details page
+    Then the My accounts page should NOT have included a title field
 
-  @s1.03
+  @1.03
   Scenario: Title field should not be displayed in Registration form via checkout process
     And I navigate to /willbishopjewellerydesign/product/bumble-bee-brooch product detail page
     And I add the product in my basket
     And I enter in my details as a guest
-    Then the Registration page should NOT include a title field
+    Then the My accounts page should NOT have included a title field
     And I click Continue button
     And I enter in my address details
     Then I should not see title with my user name
