@@ -12,9 +12,12 @@ class AddToBasket < SitePrism::Page
   element  :close,'.fancybox-item.fancybox-close'
   def add_the_product_in_basket
     add_to_basket_button.click
-    checkout_button.click
     #proceed_to_checkout.first.click
     #continue_button.click
+  end
+
+  def click_on_checkout_button
+    checkout_button.click
   end
 
   def click_on_totaltriangal

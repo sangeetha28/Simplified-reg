@@ -7,23 +7,26 @@ Feature: Basketpage total
   @5.01
   Scenario: Basket bar total in Top of Page
     Given I am on Home page
-    #And I register as a new user
+    And I navigate to /lisaangeljewellery/product/personalised-sterling-silver-bar-necklace product detail page
+    And I personalize my product
+    And I add the product in my basket
+    And I navigate to checkout
+#    And I click customization option
+#    And I hide my option
+#    And I click product link
+#    And I change my personalization
+#    And I add the product in my basket
+#    And I click customization option
+#    And I edit my option
+#    And I change part of personalization
+    And I increment quantity
+    And I decrement quantity
     And I navigate to /willbishopjewellerydesign/product/bumble-bee-brooch product detail page
     And I add the product in my basket
+    And I navigate to checkout
+    And I navigate to /artificiallandscapes/product/christmas-berries-and-blooms-hanging-basket product detail page
+    And I add the product in my basket
+    And I navigate to checkout
+#    And I delete my option
+#    And I navigate to checkout
 
-
-
-#    Then I should be able to see a Total which should be collapsed by default
-#    And I should be able to expand the Total to reveal
-#      | items |   |
-#      | estimated_delivery| |
-#    And when I expand the Total the content on the page should be pushed down
-#    And the arrow next to the Total should animate downwards
-#    And I should be able to collapse the Total
-
-
-  @5.02
-  Scenario: Basket bar total in bottom of Page
-#  Then I should be able to see a Total which should reveal
-#    | items |   |
-#    | estimated_delivery| |
