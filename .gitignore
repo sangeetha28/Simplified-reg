@@ -1,0 +1,6 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea
+cucumber_failures.log
+.bash_profile
+.bashrc
+screenshots
